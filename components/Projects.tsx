@@ -33,7 +33,7 @@ const projects = [
     shortDescription: 'Interactive coding platform with AI-powered problem-solving and live code execution.',
     fullDescription:
       'An interactive full-stack web application where students solve coding challenges to unlock each level, inspired by escape room mechanics. Users write live code directly in the browser across Python, Java, and C++ using an integrated Monaco Editor. The platform dynamically evaluates solutions through automated test cases and AI-powered feedback using Ollama API, providing adaptive hints and personalized assistance. Each challenge includes helpful video tutorials and GeeksForGeeks references, ensuring concept reinforcement alongside problem solving.',
-    tech: ['TypeScript', 'CSS', 'JavaScripts', 'HTML'],
+    tech: ['TypeScript', 'CSS', 'JavaScript', 'HTML'],
     image: '/bitquest.png',
   },
 ];
@@ -80,7 +80,7 @@ const Projects = () => {
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="bg-gradient-to-br from-[#1a1b33] to-[#2c2e4b] p-10 rounded-3xl max-w-xl mx-4 shadow-2xl"
+              className="bg-gradient-to-br from-[#1a1b33] to-[#2c2e4b] p-8 rounded-3xl max-w-xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
               initial={{ scale: 0.8, y: -50 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.8, y: -50 }}
