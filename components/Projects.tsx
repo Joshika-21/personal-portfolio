@@ -38,7 +38,6 @@ const projects = [
   },
 ];
 
-
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<any>(null);
 
@@ -72,18 +71,21 @@ const Projects = () => {
         ))}
       </div>
 
-      {/* Modal */}
       <AnimatePresence>
         {selectedProject && (
-          <motion.div className="p-10 rounded-3xl max-w-xl mx-4 shadow-2xl">
+          <motion.div 
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
             <motion.div
-              className="bg-gradient-to-br from-[#1a1b33] to-[#2c2e4b] p-10 rounded-3xl max-w-xl mx-4 text-left shadow-2xl"
+              className="bg-gradient-to-br from-[#1a1b33] to-[#2c2e4b] p-10 rounded-3xl max-w-xl mx-4 shadow-2xl"
               initial={{ scale: 0.8, y: -50 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.8, y: -50 }}
               transition={{ type: 'spring', stiffness: 200, damping: 20 }}
-        >
-              
+            >
               <Image src={selectedProject.image} alt={selectedProject.title} width={800} height={400} className="w-full h-auto rounded-2xl mb-6" />
               <h3 className="text-3xl font-bold text-white mb-6">{selectedProject.title}</h3>
               <p className="text-lg text-gray-300 leading-relaxed mb-6">{selectedProject.fullDescription}</p>
@@ -106,4 +108,5 @@ const Projects = () => {
     </section>
   );
 };
+
 export default Projects;
