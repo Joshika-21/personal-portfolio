@@ -7,10 +7,12 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Joshika Reddy Avuthu - Full Stack Developer',
   description: 'Full Stack Developer passionate about creating beautiful, functional, and user-friendly digital experiences.',
-  icons: '/favicon.ico',
   keywords: 'Full Stack Developer, Web Developer, React, Next.js, TypeScript, JavaScript',
   authors: [{ name: 'Joshika Reddy Avuthu' }],
   creator: 'Joshika Reddy Avuthu',
+  icons: {
+    icon: '/favicon.png',
+  },
   openGraph: {
     title: 'Joshika Reddy Avuthu - Full Stack Developer',
     description: 'Full Stack Developer passionate about creating beautiful, functional, and user-friendly digital experiences.',
@@ -22,10 +24,9 @@ export const metadata: Metadata = {
     title: 'Joshika Reddy Avuthu - Full Stack Developer',
     description: 'Full Stack Developer passionate about creating beautiful, functional, and user-friendly digital experiences.',
   },
+  viewport: 'width=device-width, initial-scale=1',
+  themeColor: '#3b82f6',
 };
-
-export const viewport = 'width=device-width, initial-scale=1';
-export const themeColor = '#3b82f6';
 
 export default function RootLayout({
   children,
@@ -37,4 +38,4 @@ export default function RootLayout({
       <body className={inter.className}>{children}</body>
     </html>
   );
-} 
+}
