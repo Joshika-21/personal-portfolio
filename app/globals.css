@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 240 10% 10%; /* Dark navy */
+  --foreground: 0 0% 100%;   /* White text */
+  
+  --primary: 267 86% 62%;    /* Purple */
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 240 5% 20%;   /* Darker secondary */
+  --secondary-foreground: 0 0% 100%;
+
+  --accent: 300 100% 70%;    /* Pink accent */
+  --accent-foreground: 0 0% 100%;
+
+  --muted: 240 5% 30%;
+  --muted-foreground: 240 5% 80%;
+
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 240 5% 30%;
+  --input: 240 5% 20%;
+  --ring: 267 86% 62%;
+
+  /* Chart colors if you're using chart components */
+  --chart-1: 210 100% 50%;
+  --chart-2: 150 100% 40%;
+  --chart-3: 40 100% 50%;
+  --chart-4: 280 100% 60%;
+  --chart-5: 0 100% 60%;
+}
+
+/* Optional: you can apply background & text colors globally */
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: Inter, Poppins, Arial, sans-serif;
+}
